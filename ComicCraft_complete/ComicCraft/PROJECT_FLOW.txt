@@ -1,0 +1,30 @@
+ComicCraft request flow
+
+Browser
+  |
+  v
+FastAPI /generate
+  |
+  +--> Gemini outline model
+  |       |
+  |       +--> 5 panel outline
+  |
+  +--> Gemini story model
+  |       |
+  |       +--> narration / caption / dialogue
+  |
+  +--> Hugging Face image model (x5)
+  |       |
+  |       +--> panel images
+  |
+  +--> layout_builder.py
+  |
+  +--> exporters.py
+  |       |
+  |       +--> PDF
+  |
+  v
+Jinja2 comic_preview.html
+  |
+  v
+Download PDF

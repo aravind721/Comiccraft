@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Generation Error • ComicCraft{% endblock %}
+{% block content %}
+<section class="card error-box">
+  <h1>Something went wrong</h1>
+  <p>{{ error }}</p>
+  <p>Check your API keys and model settings in <code>.env</code>, then try again.</p>
+  <a class="button secondary" href="/">Back to ComicCraft</a>
+</section>
+{% endblock %}
